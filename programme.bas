@@ -1,4 +1,5 @@
-' programme en qbasic basé sur le magazine science et vie junior no 35 (version initiale)
+' programme en qbasic basé sur le magazine science et vie junior no 35 (version corrigée)
+
 10 Screen 0: Width 40: KEY Off: Cls: Randomize Timer
 20 R$ = "2122232412223242"+
 	"21222324122232423122322312"+
