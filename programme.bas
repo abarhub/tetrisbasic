@@ -1,15 +1,6 @@
-' programme en qbasic basé sur le magazine science et vie junior no 35 (version corrigée)
-
+' programme en qbasic base sur le magazine science et vie junior no 35 (version initiale)
 10 Screen 0: Width 40: KEY Off: Cls: Randomize Timer
-20 R$ = "2122232412223242"+
-	"21222324122232423122322312"+
-	"22233331223223122223332122"+
-	"32331322322321223233132232"+
-	"23223223332232233322322333"+
-	"22322333212223331222321311"+
-	"21222312223132212213231213"+
-	"23331121121312223233122232"+
-	"3212232231221223221122223"
+20 R$ = "2122232412223242212223241222324231223223122223333122322312222333212232331322322321223233132232232232233322322333223223332232233321222333122232131121222312223132212213231213233311211213122232331222323212232231221223221122223"
 30 For i = 1 To 3: For j = 0 To 3: For K = 1 To 4: A$(i, j, K) = Mid$(R$, 32 * i - 31 + 2 + K - 2 + 8 * j, 2): Next K, j, i
 ' TS=T$ ?
 40 SC = 0: S$ = Chr$(219): Dim B$(23), TS(24, 11): For i = 1 To 23: B$(i) = Space$(9): Next i
@@ -26,8 +17,8 @@ Next i
 120 K = (K - 3 * (R$ = "2") - (R$ = "5")) Mod 4: YO = YO + (1 And R$ = "3") - (1 And R$ = "1")
 130 P = 0:
 For i = 1 To 4:
-    ' voir quoi mettre a la place de TS(1,1)
-    TS(1, 1) = P + TS(XO + Val(Right$(A$(S, K, i), 1)), YO - 9 + Val(Left$(A$(S, K, i), 1))):
+    ' voir quoi mettre a la place de GG
+    GG = P + TS(XO + Val(Right$(A$(S, K, i), 1)), YO - 9 + Val(Left$(A$(S, K, i), 1))):
 Next i:
 If P <> 0 Then XO = XI: YO = YI: K = KI
 140 If XA = XO Then A$ = S$: PP = S: TT = 1: GoSub 150: P = 1: GoSub 180: If XO <> 1 Then GoTo 70 Else Print "C'est fini": End Else GoTo 80
