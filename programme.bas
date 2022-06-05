@@ -1,4 +1,4 @@
-'$Debug
+$Debug
 ' programme en qbasic base sur le magazine science et vie junior no 35 (version corrigee)
 10 Screen 0:
 Width 40:
@@ -77,20 +77,21 @@ If P <> 0 Then XO = XI: YO = YI: K = KI
 150 For i = 1 To 4:
     TX = XO + Val(Right$(A$(S, K, i), 1)):
     TY = YO + Val(Left$(A$(S, K, i), 1)):
-    If TX >= 0 And TX < 24 And TY > 0 And TY < 11 Then
-        Locate TX, TY:
-        Print A$;:
+    'If TX >= 0 And TX < 24 And TY > 0 And TY < 11 Then
+    Locate TX, TY:
+    Print A$;:
 
-        TS(TX, TY - 9) = PP
+    TS(TX, TY - 9) = PP
 
-        160 If TT = 1 Then
-            Mid$(B$(TX), TY - 10) = A$
-        End If
+    160 If TT = 1 Then
+        Mid$(B$(TX), TY - 10) = A$
     End If
+    'End If
 170 Next i:
 TT = 0:
 Return
-180 P = 3 * P: For i = 23 To 1 Step -1
+180 P = 3 * P:
+For i = 23 To 1 Step -1
     190 If B$(i) = String$(9, S$) Then
         For j = i To 2 Step -1:
             B$(j) = B$(j - 1):
