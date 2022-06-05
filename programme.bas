@@ -73,7 +73,23 @@ For i = 1 To 4:
     End If
 Next i:
 If P <> 0 Then XO = XI: YO = YI: K = KI
-140 If XA = XO Then A$ = S$: PP = S: TT = 1: GoSub 150: P = 1: GoSub 180: If XO <> 1 Then GoTo 70 Else Print "C'est fini": End Else GoTo 80
+140 If XA = XO Then
+    A$ = S$:
+    PP = S:
+    TT = 1:
+    GoSub 150:
+    P = 1:
+    GoSub 180:
+    If XO <> 1 Then
+        GoTo 70
+    Else
+        ' fin du jeux
+        Print "C'est fini":
+        End
+    End If
+Else
+    GoTo 80
+End If
 150 For i = 1 To 4:
     TX = XO + Val(Right$(A$(S, K, i), 1)):
     TY = YO + Val(Left$(A$(S, K, i), 1)):
