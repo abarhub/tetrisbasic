@@ -93,16 +93,16 @@ End If
 150 For i = 1 To 4:
     TX = XO + Val(Right$(A$(S, K, i), 1)):
     TY = YO + Val(Left$(A$(S, K, i), 1)):
-    'If TX >= 0 And TX < 24 And TY > 0 And TY < 11 Then
-    Locate TX, TY:
-    Print A$;:
+    If TX >= 0 And TX < 24 And TY - 10 > 0 And TY - 10 < 11 And TY - 9 > 0 And TY - 9 < 11 Then
+        Locate TX, TY:
+        Print A$;:
 
-    TS(TX, TY - 9) = PP
+        TS(TX, TY - 9) = PP
 
-    160 If TT = 1 Then
-        Mid$(B$(TX), TY - 10) = A$
+        160 If TT = 1 Then
+            Mid$(B$(TX), TY - 10) = A$
+        End If
     End If
-    'End If
 170 Next i:
 TT = 0:
 Return
