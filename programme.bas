@@ -82,7 +82,11 @@ For i = 1 To 4:
         P = P + TS(posx, posy):
     End If
 Next i:
-If P <> 0 Then XO = XI: YO = YI: K = KI
+If P <> 0 Then
+    XO = XI:
+    YO = YI:
+    K = KI
+endif
 140 If XA = XO Then
     A$ = S$:
     PP = S:
