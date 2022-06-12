@@ -13,3 +13,9 @@ Il fonctionne avec [Basic 2 DOSBox](https://www.qbasic.net/en/qbasic-downloads/D
 
 ![tetris2](./images/tetris2.png)
 
+![tetris3](./images/tetris3.png)
+
+![tetris4](./images/tetris4.png)
+
+![tetris5](./images/tetris5.png)
+
